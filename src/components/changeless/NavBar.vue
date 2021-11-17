@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 12:11:04
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 20:57:30
+ * @LastEditTime: 2021-11-17 22:36:46
  * @Description: file content
 -->
 <template>
@@ -26,10 +26,10 @@
         >留言</el-menu-item
       >
       <el-menu-item class="el-menu-item" index="4" @click="jumpToHome"
-        >占位4</el-menu-item
+        >项目</el-menu-item
       >
       <el-menu-item class="el-menu-item" index="5" @click="jumpToHome"
-        >占位5</el-menu-item
+        >关于</el-menu-item
       >
       <el-menu-item class="el-menu-item-input">
         <el-input

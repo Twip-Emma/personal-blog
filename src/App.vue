@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 10:27:10
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 20:40:22
+ * @LastEditTime: 2021-11-17 21:17:26
  * @Description: file content
 -->
 <template>
@@ -53,10 +53,10 @@ export default {
 }
 
 .el-aside {
-  background-color: #d3dce6;
+  /* background-color: #d3dce6; */
   color: #333;
   text-align: center;
-  line-height: 200px;
+  line-height: 100px;
 }
 
 .el-main {

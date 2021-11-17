@@ -7,3 +7,7 @@
 .el-header {
     padding: 0 50px;
 }
+
+.el-date-picker{
+    padding: 0;
+}

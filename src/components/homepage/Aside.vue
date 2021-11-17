@@ -2,11 +2,11 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 14:39:09
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 20:51:24
+ * @LastEditTime: 2021-11-17 21:25:20
  * @Description: file content
 -->
 <template>
-  <div>
+  <div class="out">
     <Calendar />
     <Sort />
     <Label />
@@ -27,5 +27,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
 </style>

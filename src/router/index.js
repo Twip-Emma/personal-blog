@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:42:56
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 16:33:13
+ * @LastEditTime: 2021-11-17 19:53:17
  * @Description: file content
  */
 import Vue from 'vue'
@@ -42,7 +42,6 @@ const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {  
     return originalPush.call(this, location).catch(err => err)
 }
-
 
 
 

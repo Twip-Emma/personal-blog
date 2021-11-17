@@ -2,40 +2,54 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 10:27:10
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 15:25:57
+ * @LastEditTime: 2021-11-17 20:40:22
  * @Description: file content
 -->
 <template>
-  <div id="app">
+  <div class="app">
     <el-container>
-      <el-header><NavBar/></el-header>
+      <el-header><NavBar /></el-header>
       <!-- 这里应该动态展示 -->
       <!-- <HomePage/> -->
       <router-view></router-view>
-      <el-footer><Footer/></el-footer>
+      <el-footer class="el-footer"><Footer /></el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
 // import HomePage from "@/views/HomePage";
-import NavBar from '@/components/changeless/NavBar'
-import Footer from '@/components/changeless/Footer'
+import NavBar from "@/components/changeless/NavBar";
+import Footer from "@/components/changeless/Footer";
 export default {
   name: "App",
   components: {
-    NavBar,Footer
+    NavBar,
+    Footer,
   },
 };
 </script>
 
 <style>
-.el-header,
+.app {
+  width: 80%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+
+.el-header {
+  background-color: #545c64;
+}
 .el-footer {
-  /* background-color: #b3c0d1; */
+  background-color: #545c64;
   color: #333;
   text-align: center;
   line-height: 60px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 0%;
 }
 
 .el-aside {
@@ -55,13 +69,4 @@ export default {
 body > .el-container {
   margin-bottom: 40px;
 }
-
-/* .el-container:nth-child(5) .el-aside,
-.el-container:nth-child(6) .el-aside {
-  line-height: 260px;
-}
-
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
-} */
 </style>

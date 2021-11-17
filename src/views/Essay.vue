@@ -2,12 +2,12 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 16:50:58
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 18:52:46
+ * @LastEditTime: 2021-11-17 21:01:40
  * @Description: file content
 -->
 <template>
   <el-container>
-    <el-timeline class="animate__animated animate__fadeInLeft">
+    <el-timeline>
       <el-timeline-item
         :color="essay.borderColor"
         v-for="essay in essayList"
@@ -74,13 +74,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .el-image {
   width: 200px;
 }
 .el-card {
   border-radius: 20px;
-  box-shadow: 0 0 15px 5px white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
 }
 
 .el-timeline {

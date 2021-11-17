@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 10:27:10
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 17:51:10
+ * @LastEditTime: 2021-11-17 20:20:39
  * @Description: file content
  */
 import Vue from 'vue'
@@ -10,6 +10,7 @@ import App from './App.vue'
 // import axios from "axios"
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import "./assets/css/global.css"
 
 import VueRouter from "vue-router"
 import router from "./router"

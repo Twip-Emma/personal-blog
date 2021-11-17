@@ -1,9 +1,16 @@
+<!--
+ * @Author: 七画一只妖
+ * @Date: 2021-11-17 14:15:29
+ * @LastEditors: 七画一只妖
+ * @LastEditTime: 2021-11-17 20:49:05
+ * @Description: file content
+-->
 <template>
     <div class="footer-wrap">
         <!--    center aligned居中-->
         <el-row :gutter="20" class=" footer-info">
             <el-col class="ewm" :xs="24" :sm="4" >
-                <el-image :src="imageUrl" alt="图片加载失败"
+                <img src="..\\..\\assets\\logo.png" alt="图片加载失败"
                           class="" style="width: 110px"/>
             </el-col>
             <el-col class="" :xs="24" :sm="7">
@@ -35,8 +42,8 @@ export default {
     data(){
         return {
             footerList: [],
-            // ???
-            imageUrl:"...\\assets\\luoyin-yueshen.png"
+            // D:\work\Vue\个人博客系统\personal-blog\src\assets\logo.png
+            imageUrl:"..\\..\\src\\assets\\logo.png"
         }
     },
     methods: {
@@ -44,7 +51,7 @@ export default {
 }
 </script>
 
-<style scoped lang="css">
+<style scoped>
     *:hover{
         cursor: pointer;
     }
@@ -52,7 +59,7 @@ export default {
         bottom: 0 !important;
         line-height: 2;
         position: relative;
-        padding: 40px 20px;
+        padding: 0px 0px;
         color: #eee;
         font-size: 14px;
         text-align: center;

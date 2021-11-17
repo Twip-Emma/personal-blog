@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 14:57:27
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 14:57:28
+ * @LastEditTime: 2021-11-17 21:08:06
  * @Description: file content
 -->
 <template>
@@ -17,6 +17,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

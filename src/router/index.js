@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:42:56
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 19:53:17
+ * @LastEditTime: 2021-11-17 22:40:55
  * @Description: file content
  */
 import Vue from 'vue'
@@ -12,6 +12,7 @@ import VueRouter from 'vue-router'
 // const Welcome = () => import(/* webpackChunkName: "Welcome" */ '@/views/Welcome')
 import HomePage from '@/views/HomePage'
 import Essay from '@/views/Essay'
+import Message from '@/views/Message'
 
 
 
@@ -34,6 +35,11 @@ const routes = [
         path: '/essay',
         component: Essay,
     },
+    {
+        name:"Message",
+        path: '/message',
+        component:Message
+    }
 ]
 
 

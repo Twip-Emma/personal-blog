@@ -2,11 +2,11 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 15:02:20
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 15:06:25
+ * @LastEditTime: 2021-11-17 16:48:34
  * @Description: file content
 -->
 <template>
-  <div><EssayItem/></div>
+  <div class="essay_main"><EssayItem /><EssayItem /><EssayItem /></div>
 </template>
 
 <script>
@@ -22,5 +22,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.essay_main {
+  display: flex;
+  justify-content: space-around;
+}
 </style>

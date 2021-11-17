@@ -2,17 +2,14 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 15:02:43
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 15:04:36
+ * @LastEditTime: 2021-11-17 16:48:49
  * @Description: file content
 -->
 <template>
-  <div>
+  <div class="item">
     <el-row>
       <el-col
         :span="8"
-        v-for="(o, index) in 4"
-        :key="o"
-        :offset="index > 0 ? 4 : 0"
       >
         <el-card :body-style="{ padding: '0px' }">
           <img
@@ -23,7 +20,7 @@
             <span>好吃的汉堡</span>
             <div class="bottom clearfix">
               <time class="time">{{ currentDate }}</time>
-              <el-button type="text" class="button">操作按钮</el-button>
+              <el-button type="text" class="button">点击查看</el-button>
             </div>
           </div>
         </el-card>

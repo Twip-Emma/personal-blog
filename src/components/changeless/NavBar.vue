@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 12:11:04
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 23:06:43
+ * @LastEditTime: 2021-11-18 08:11:16
  * @Description: file content
 -->
 <template>
@@ -25,7 +25,7 @@
       <el-menu-item class="el-menu-item" index="3" @click="jumpToMessage"
         >留言</el-menu-item
       >
-      <el-menu-item class="el-menu-item" index="4" @click="jumpToHome"
+      <el-menu-item class="el-menu-item" index="4" @click="jumpToProject"
         >项目</el-menu-item
       >
       <el-menu-item class="el-menu-item" index="5" @click="jumpToHome"
@@ -70,6 +70,12 @@ export default {
     jumpToMessage(){
       this.$router.push({
         name:"Message",
+        query:{}
+      })
+    },
+    jumpToProject(){
+      this.$router.push({
+        name:"Project",
         query:{}
       })
     },

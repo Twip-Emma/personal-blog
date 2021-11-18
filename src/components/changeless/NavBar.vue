@@ -2,12 +2,12 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 12:11:04
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 22:42:00
+ * @LastEditTime: 2021-11-17 23:06:43
  * @Description: file content
 -->
 <template>
   <div>
-    <div class="line"></div>
+    <!-- 顶部导航栏 -->
     <el-menu
       class="el-menu-demo"
       mode="horizontal"

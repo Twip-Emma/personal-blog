@@ -2,12 +2,12 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 14:15:29
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 20:49:05
+ * @LastEditTime: 2021-11-17 23:06:15
  * @Description: file content
 -->
 <template>
     <div class="footer-wrap">
-        <!--    center aligned居中-->
+        <!-- 展示主要内容，最左边是图片 -->
         <el-row :gutter="20" class=" footer-info">
             <el-col class="ewm" :xs="24" :sm="4" >
                 <img src="..\\..\\assets\\logo.png" alt="图片加载失败"
@@ -28,6 +28,7 @@
                     ???
             </el-col>
         </el-row>
+        <!-- 最底下一行文字，展示网站信息 -->
         <el-row>
             <div class="">
                 <p class="">Copright©？起始年份-终止年份？ ？你的名字？ Designed by

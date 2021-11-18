@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:41:37
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 21:26:51
+ * @LastEditTime: 2021-11-18 07:59:43
  * @Description: file content
 -->
 <template>
@@ -10,7 +10,7 @@
     <el-container>
       <!-- <h1>这是HomePage组件</h1> -->
       <el-aside width="200px" class="marrgin"><Aside /></el-aside>
-      <el-main class="marrgin"><HomeMain/></el-main>
+      <el-main class="marrgin"><HomeMain/><HomeMain/></el-main>
     </el-container>
   </div>
 </template>

@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 14:37:58
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 21:12:58
+ * @LastEditTime: 2021-11-17 23:11:50
  * @Description: file content
 -->
 <template>
@@ -19,5 +19,6 @@ export default {
 .out{
   height: 100px;
   background: skyblue;
+  border-radius: 5px
 }
 </style>

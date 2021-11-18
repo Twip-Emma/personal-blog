@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 12:11:04
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-18 08:11:16
+ * @LastEditTime: 2021-11-18 17:11:32
  * @Description: file content
 -->
 <template>
@@ -28,7 +28,7 @@
       <el-menu-item class="el-menu-item" index="4" @click="jumpToProject"
         >项目</el-menu-item
       >
-      <el-menu-item class="el-menu-item" index="5" @click="jumpToHome"
+      <el-menu-item class="el-menu-item" index="5" @click="jumpToAbout"
         >关于</el-menu-item
       >
       <el-menu-item class="el-menu-item-input">
@@ -67,17 +67,23 @@ export default {
         query: {},
       });
     },
-    jumpToMessage(){
+    jumpToMessage() {
       this.$router.push({
-        name:"Message",
-        query:{}
-      })
+        name: "Message",
+        query: {},
+      });
     },
-    jumpToProject(){
+    jumpToProject() {
       this.$router.push({
-        name:"Project",
-        query:{}
-      })
+        name: "Project",
+        query: {},
+      });
+    },
+    jumpToAbout() {
+      this.$router.push({
+        name: "About",
+        query: {},
+      });
     },
     handleSelect(key, keyPath) {
       console.log(key, keyPath);

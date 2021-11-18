@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:42:56
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-18 08:10:07
+ * @LastEditTime: 2021-11-18 17:12:10
  * @Description: file content
  */
 import Vue from 'vue'
@@ -14,7 +14,7 @@ import HomePage from '@/views/HomePage'
 import Essay from '@/views/Essay'
 import Message from '@/views/Message'
 import Project from '@/views/Project'
-
+import About from '@/views/About'
 
 
 const routes = [
@@ -45,6 +45,11 @@ const routes = [
         name:"Project",
         path: '/project',
         component:Project
+    },
+    {
+        name:"About",
+        path:"/about",
+        component:About
     }
 ]
 

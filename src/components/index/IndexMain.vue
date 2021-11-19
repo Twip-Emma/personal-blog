@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 20:59:53
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-18 22:04:13
+ * @LastEditTime: 2021-11-19 09:34:51
  * @Description: file content
 -->
 <template>
@@ -100,7 +100,7 @@ export default {
       blogList: [
         {
           id: 449,
-          title: "项目名称1",
+          title: "博客名称1",
           content: "测试测试测试测试测试测试测试测试测试测试测试测试测试v",
           firstPicture:
             "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
@@ -134,7 +134,7 @@ export default {
         },
         {
           id: 450,
-          title: "项目名称1",
+          title: "博客名称1",
           content: "测试测试测试测试测试测试测试测试测试测试测试测试测试v",
           firstPicture:
             "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
@@ -168,7 +168,7 @@ export default {
         },
         {
           id: 451,
-          title: "项目名称1",
+          title: "博客名称1",
           content: "测试测试测试测试测试测试测试测试测试测试测试测试测试v",
           firstPicture:
             "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",

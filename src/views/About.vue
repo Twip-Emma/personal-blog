@@ -410,7 +410,7 @@ aside_content .card-info .author-info__description {
     display: inline-block;
 }
 #aside_content .card-webinfo .webinfo .webinfo-item div:last-child {
-    display: inline-block;
+    display: block;
     float: right;
 }
 #footer {

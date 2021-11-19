@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:42:56
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 10:30:20
+ * @LastEditTime: 2021-11-19 19:04:41
  * @Description: file content
  */
 import Vue from 'vue'
@@ -16,6 +16,8 @@ import Message from '@/views/Message'
 import Project from '@/views/Project'
 import About from '@/views/About'
 import BlogInfo from '@/components/index/BlogInfo'
+
+import Login from '@/components/login/Login'
 
 
 const routes = [
@@ -56,6 +58,11 @@ const routes = [
         name:"BlogInfo",
         path:"/bloginfo",
         component:BlogInfo
+    },
+    {
+        name:"Login",
+        path:"/login",
+        component:Login
     }
 ]
 

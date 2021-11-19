@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 12:11:04
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-18 17:11:32
+ * @LastEditTime: 2021-11-19 18:34:38
  * @Description: file content
 -->
 <template>
@@ -39,16 +39,21 @@
         >
         </el-input>
       </el-menu-item>
+      <Logined/>
     </el-menu>
   </div>
 </template>
 
 <script>
 // import {mapActions} from "vuex"
+import Logined from '@/components/changeless/Logined'
 export default {
   name: "NavBar",
+  components:{Logined},
   data() {
     return {
+
+      administrator: true,
       activeIndex: "1",
       activeIndex2: "1",
       userInput: "",

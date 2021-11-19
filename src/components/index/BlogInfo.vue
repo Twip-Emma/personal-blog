@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 09:40:09
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 12:21:18
+ * @LastEditTime: 2021-11-19 12:26:42
  * @Description: file content
 -->
 <template>
@@ -82,86 +82,9 @@
       </div>
       <!-- 展示评论区 -->
       <div shadow="never" class="comments">
-        <div class="header">评论</div>
-        <!-- <div v-for="cmt in rootCmtTree" :key="cmt.id"> -->
+        <div class="header">发送一条友善的评论吧~</div>
             <CommentBlog/>
-          <!-- <comment
-            :cmt="cmt"
-            :parent-id="-1"
-            :rp-active-id="rpActiveId"
-          ></comment> -->
-          <!-- <reply
-            style="margin-left: 40px"
-            v-if="rpActiveId === cmt.id"
-            :id="cmt.id"
-            :blog-id="blog.id"
-            v-on:quit="cancel"
-            v-on:newCmt="replyComp"
-          ></reply>
-
-          <span v-else class="reply" @click="rpActiveId = cmt.id">回复</span> -->
-          <!-- <span
-            v-if="administrator || (userInfo && cmt.userId === userInfo.id)"
-            class="delete"
-            @click="deleteComment(cmt.id)"
-            >删除</span
-          > -->
-          <!-- <div
-            style="margin-left: 40px"
-            v-for="rp in cmt.children"
-            :key="rp.id"
-          >
-            <comment
-              :cmt="rp"
-              :parent-id="cmt.id"
-              :rp-active-id="rpActiveId"
-            ></comment>
-            <reply
-              style="margin-left: 40px"
-              v-if="rpActiveId === rp.id"
-              :id="rp.id"
-              :blog-id="blog.id"
-              v-on:quit="cancel"
-              v-on:newCmt="replyComp"
-            ></reply>
-            <span v-else class="reply" @click="rpActiveId = rp.id">回复</span>
-            <span
-              v-if="administrator || (userInfo && rp.userId === userInfo.id)"
-              class="delete"
-              @click="deleteComment(rp.id)"
-              >删除</span
-            >
-          </div> -->
-        <!-- </div> -->
       </div>
-      <!-- 回复这个博客 -->
-      <el-form
-        class="commmet-reply"
-        :model="commentForm"
-        :rules="commentFormRules"
-        ref="commentFormRef"
-      >
-        <el-form-item prop="content">
-          <el-input
-            v-model="commentForm.content"
-            :validate-event="false"
-            type="textarea"
-            class="write-commmet"
-            :rows="6"
-          >
-          </el-input>
-        </el-form-item>
-        <div class="submit">
-          <el-button
-            prefix-icon="el-icon-submit"
-            type="primary"
-            class="item"
-            @click="submitCmt()"
-          >
-            <i class="el-icon-edit"></i> 提交
-          </el-button>
-        </div>
-      </el-form>
     </el-card>
   </el-container>
 </template>
@@ -459,7 +382,7 @@ hr.style-one {
 .comments {
   margin-top: 150px;
   /* border: 1px solid rgba(34, 36, 38, 0.15); */
-  border-top: 2px solid #409eff;
+  /* border-top: 2px solid #409eff; */
   text-align: left;
 }
 .comments .reply {

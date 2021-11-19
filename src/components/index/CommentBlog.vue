@@ -2,38 +2,79 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 12:14:06
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 12:15:28
+ * @LastEditTime: 2021-11-19 12:24:22
  * @Description: file content
 -->
 <template>
-  <el-card
-    v-if="messageList.length > 0"
-    class="animate__animated animate__fadeInLeft"
-  >
-    <ul style="padding: 0" class="comment-list">
-      <li class="comment" v-for="ms in messageList" :key="ms.id">
-        <el-avatar v-if="ms.avatar !== ''" :src="ms.avatar"></el-avatar>
-        <el-avatar v-else icon="el-icon-user-solid"></el-avatar>
-        <div class="content">
-          <div
-            style="display: flex; justify-content: space-between; width: 100%"
-          >
-            <div class="nkname">
-              <span class="name">{{ ms.nickname }} </span>
-              <span class="date">{{ ms.createTime }}</span>
-            </div>
+  <el-container style="opacity: 0.9" class="message">
+    <el-card class="animate__animated animate__fadeInLeft publish">
+      <!-- 设置你的头像和昵称 -->
+      <div class="author">
+        <el-avatar
+          v-if="userInfo === null"
+          icon="el-icon-user-solid"
+          size="large"
+          style="background-color: #666"
+        ></el-avatar>
+        <el-avatar v-else :src="userInfo.avatar" size="large"></el-avatar>
+        <div>
+          <div class="nkname">
+            <span class="name" v-if="userInfo === null">匿名用户</span>
+            <span class="name" v-else>{{ userInfo.nickname }} </span>
           </div>
-          <p class="reply">{{ ms.content }}</p>
         </div>
-      </li>
-    </ul>
-  </el-card>
+      </div>
+      <!-- form表单，用于发布留言 -->
+      <el-form
+        :model="messageForm"
+        :rules="messageFormRules"
+        ref="messageFormRef"
+      >
+        <el-form-item prop="content">
+          <el-input
+            :rows="5"
+            v-model="messageForm.content"
+            type="textarea"
+            placeholder="请输入你的留言"
+          ></el-input>
+        </el-form-item>
+        <el-form-item style="text-align: right">
+          <el-button type="primary">点击发表</el-button>
+        </el-form-item>
+      </el-form>
+    </el-card>
+
+    <el-card
+      v-if="messageList.length > 0"
+      class="animate__animated animate__fadeInLeft"
+    >
+      <ul style="padding: 0" class="comment-list">
+        <li class="comment" v-for="ms in messageList" :key="ms.id">
+          <el-avatar v-if="ms.avatar !== ''" :src="ms.avatar"></el-avatar>
+          <el-avatar v-else icon="el-icon-user-solid"></el-avatar>
+          <div class="content">
+            <div
+              style="display: flex; justify-content: space-between; width: 100%"
+            >
+              <div class="nkname">
+                <span class="name">{{ ms.nickname }} </span>
+                <span class="date">{{ ms.createTime }}</span>
+              </div>
+            </div>
+            <p class="reply">{{ ms.content }}</p>
+          </div>
+        </li>
+      </ul>
+    </el-card>
+  </el-container>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      picList: [],
+      editing: false,
       messageList: [
         {
           id: "xxxx1",
@@ -43,6 +84,24 @@ export default {
           content: "这是评论1",
         },
       ],
+      userInfo: {
+          nickname:"七画一只妖",
+        avatar:
+          "https://cdn.jsdelivr.net/gh/yuewuzhijian/cdn/yuewuzhijian/yuewuzhijian.png",
+      },
+      message: {
+        userId: -1,
+        content: "",
+      },
+      messageForm: {
+        content: "",
+      },
+      messageFormRules: {
+        content: [
+          { required: true, message: "留言内容不能为空！" },
+          { min: 0, max: 100, message: "留言内容不超过100字！" },
+        ],
+      },
     };
   },
 };

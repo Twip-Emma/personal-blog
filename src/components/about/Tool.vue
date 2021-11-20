@@ -2,15 +2,15 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-20 13:50:08
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 13:54:24
+ * @LastEditTime: 2021-11-20 21:26:59
  * @Description: file content
 -->
 <template>
   <el-collapse v-model="activeName" accordion>
     <el-collapse-item title="一致性 Consistency" name="1">
-      <div>
+      <a href="#">
         与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；
-      </div>
+      </a>
       <div>
         在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。
       </div>

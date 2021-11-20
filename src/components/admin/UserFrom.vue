@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-20 17:04:10
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 18:48:21
+ * @LastEditTime: 2021-11-20 21:15:18
  * @Description: file content
 -->
 <template>
@@ -14,13 +14,6 @@
     <el-table-column prop="passDes" label="加密规则" width="100"></el-table-column>
     <el-table-column fixed="right" label="操作" width="210">
       <template>
-        <!-- <el-button
-          @click.native.prevent="deleteRow(scope.$index, tableData)"
-          type="text"
-          size="small"
-        >
-          移除
-        </el-button> -->
         <el-button type="primary" icon="el-icon-edit"></el-button>
         <el-button type="primary" icon="el-icon-warning"></el-button>
         <el-button type="primary" icon="el-icon-delete"></el-button>

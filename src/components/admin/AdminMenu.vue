@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-20 16:42:13
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 18:53:00
+ * @LastEditTime: 2021-11-20 21:13:42
  * @Description: file content
 -->
 <template>
@@ -20,6 +20,7 @@
           text-color="#fff"
           active-text-color="#ffd04b"
         >
+          <!-- 用户管理 -->
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-view"></i>
@@ -27,26 +28,70 @@
             </template>
             <el-menu-item-group>
               <template slot="title">普通用户管理</template>
-              <el-menu-item index="1-1" @click="adminJumpTo('AdminUserFrom')">账号密码</el-menu-item>
-              <el-menu-item index="1-2" @click="adminJumpTo('AdminUserFrom')">标识设置</el-menu-item>
+              <el-menu-item index="1-1" @click="adminJumpTo('AdminUserFrom')"
+                >账号密码</el-menu-item
+              >
+              <el-menu-item index="1-2" @click="adminJumpTo('AdminUserFrom')"
+                >标识设置</el-menu-item
+              >
             </el-menu-item-group>
             <el-menu-item-group title="用户触发事件">
-              <el-menu-item index="1-3" @click="adminJumpTo('AdminUserFrom')">事件总览</el-menu-item>
-              <el-menu-item index="1-3" @click="adminJumpTo('AdminUserFrom')">响应标识</el-menu-item>
+              <el-menu-item index="1-3" @click="adminJumpTo('AdminUserFrom')"
+                >事件总览</el-menu-item
+              >
+              <el-menu-item index="1-4" @click="adminJumpTo('AdminUserFrom')"
+                >响应标识</el-menu-item
+              >
             </el-menu-item-group>
           </el-submenu>
-          <el-menu-item index="2">
-            <i class="el-icon-tickets"></i>
-            <span slot="title">文章面板</span>
-          </el-menu-item>
-          <el-menu-item index="3">
-            <i class="el-icon-edit"></i>
-            <span slot="title">留言面板</span>
-          </el-menu-item>
-          <el-menu-item index="4">
-            <i class="el-icon-service"></i>
-            <span slot="title">监听面板</span>
-          </el-menu-item>
+          <!-- 文章管理 -->
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-tickets"></i>
+              <span>文章面板</span>
+            </template>
+            <el-menu-item-group>
+              <template slot="title">博客管理</template>
+              <el-menu-item index="2-1" @click="adminJumpTo('AdminUserFrom')"
+                >博客列表</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
+          <!-- 留言管理 -->
+          <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-edit"></i>
+              <span>留言面板</span>
+            </template>
+            <el-menu-item-group>
+              <template slot="title">普通用户管理</template>
+              <el-menu-item index="3-1" @click="adminJumpTo('AdminUserFrom')"
+                >账号密码</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
+          <!-- 事件管理 -->
+          <el-submenu index="4">
+            <template slot="title">
+              <i class="el-icon-service"></i>
+              <span>事件监听</span>
+            </template>
+            <el-menu-item-group>
+              <template slot="title">用户动作</template>
+              <el-menu-item index="4-1" @click="adminJumpTo('AdminUserFrom')"
+                >请求监听</el-menu-item
+              >
+              <el-menu-item index="4-2" @click="adminJumpTo('AdminUserFrom')"
+                >登录登出</el-menu-item
+              >
+              <el-menu-item index="4-3" @click="adminJumpTo('AdminUserFrom')"
+                >昵称变更</el-menu-item
+              >
+              <el-menu-item index="4-4" @click="adminJumpTo('AdminUserFrom')"
+                >头像变更</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-col>
     </el-row>

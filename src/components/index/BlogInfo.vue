@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 09:40:09
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 22:26:04
+ * @LastEditTime: 2021-11-20 22:52:50
  * @Description: file content
 -->
 <template>
@@ -83,21 +83,35 @@
       <!-- 展示评论区 -->
       <div shadow="never" class="comments">
         <div class="header">发送一条友善的评论吧~</div>
-            <CommentBlog/>
+        <CommentBlog />
       </div>
     </el-card>
   </el-container>
 </template>
 
 <script>
-import CommentBlog from '@/components/index/CommentBlog'
+import CommentBlog from "@/components/index/CommentBlog";
 export default {
-    components:{CommentBlog},
+  components: { CommentBlog },
   data() {
     return {
       administrator: false,
       userInfo: [],
-            messageList: [
+      messageList: [
+        {
+          id: "xxxx1",
+          avatar: "???",
+          nickname: "昵称",
+          createTime: "2021-11-17",
+          content: "这是评论1",
+        },
+        {
+          id: "xxxx1",
+          avatar: "???",
+          nickname: "昵称",
+          createTime: "2021-11-17",
+          content: "这是评论1",
+        },
         {
           id: "xxxx1",
           avatar: "???",
@@ -115,11 +129,6 @@ export default {
           "http://hikari.top/images/3c92cb62-89a4-47dc-b7bb-9fa5eb2f3a63.png",
         flag: "原创",
         views: 338,
-        appreciation: 0,
-        shareStatement: false,
-        commentabled: true,
-        published: false,
-        recommend: false,
         createTime: "2021-08-16T14:36:31.064+00:00",
         updateTime: "2021-08-16T14:36:31.064+00:00",
         description:
@@ -137,16 +146,9 @@ export default {
         ],
         user: {
           id: 1,
-          nickname: "Hikari",
-          username: "zm",
-          password: "f8d178f793ec53cf6e2e4e5d401d5277",
-          email: "2569757226@qq.com",
+          nickname: "七画一只妖",
           avatar:
             "http://hikari.top/images/17a0dd9a-4898-413e-898e-678e2be068fa.png",
-          loginProvince: "福建省",
-          loginCity: "福州市",
-          loginLat: "26.07421",
-          loginLng: "119.29647",
           type: "1",
           createTime: "2021-10-13T13:55:12.179+00:00",
           updateTime: "2021-10-13T13:55:12.179+00:00",

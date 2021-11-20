@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 12:11:04
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 16:58:27
+ * @LastEditTime: 2021-11-20 22:45:11
  * @Description: file content
 -->
 <template>
@@ -16,19 +16,19 @@
       text-color="#fff"
       active-text-color="#ffd04b"
     >
-      <el-menu-item class="el-menu-item_p" index="1" @click="jumpToHome"
+      <el-menu-item class="el-menu-item_p" index="1" @click="pageSwitch('HomePage')"
         >首页</el-menu-item
       >
-      <el-menu-item class="el-menu-item_p" index="2" @click="jumpToEssay"
+      <el-menu-item class="el-menu-item_p" index="2" @click="pageSwitch('Essay')"
         >随笔</el-menu-item
       >
-      <el-menu-item class="el-menu-item_p" index="3" @click="jumpToMessage"
+      <el-menu-item class="el-menu-item_p" index="3" @click="pageSwitch('Message')"
         >留言</el-menu-item
       >
-      <el-menu-item class="el-menu-item_p" index="4" @click="jumpToProject"
+      <el-menu-item class="el-menu-item_p" index="4" @click="pageSwitch('Project')"
         >项目</el-menu-item
       >
-      <el-menu-item class="el-menu-item_p" index="5" @click="jumpToAbout"
+      <el-menu-item class="el-menu-item_p" index="5" @click="pageSwitch('About')"
         >关于</el-menu-item
       >
       <el-menu-item class="el-menu-item_p-input">
@@ -39,20 +39,19 @@
         >
         </el-input>
       </el-menu-item>
-      <Logined/>
+      <Logined />
     </el-menu>
   </div>
 </template>
 
 <script>
 // import {mapActions} from "vuex"
-import Logined from '@/components/changeless/Logined'
+import Logined from "@/components/changeless/Logined";
 export default {
   name: "NavBar",
-  components:{Logined},
+  components: { Logined },
   data() {
     return {
-
       administrator: true,
       activeIndex: "1",
       activeIndex2: "1",
@@ -60,33 +59,9 @@ export default {
     };
   },
   methods: {
-    jumpToHome() {
+    pageSwitch(target) {
       this.$router.push({
-        name: "HomePage",
-        query: {},
-      });
-    },
-    jumpToEssay() {
-      this.$router.push({
-        name: "Essay",
-        query: {},
-      });
-    },
-    jumpToMessage() {
-      this.$router.push({
-        name: "Message",
-        query: {},
-      });
-    },
-    jumpToProject() {
-      this.$router.push({
-        name: "Project",
-        query: {},
-      });
-    },
-    jumpToAbout() {
-      this.$router.push({
-        name: "About",
+        name: target,
         query: {},
       });
     },

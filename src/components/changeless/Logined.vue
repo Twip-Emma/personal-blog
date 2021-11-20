@@ -2,16 +2,16 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 18:05:54
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 12:41:58
+ * @LastEditTime: 2021-11-20 22:43:17
  * @Description: file content
 -->
 <template>
   <el-menu-item>
     <div v-if="logined" style="margin-right: 50px">
-      <el-button size="mini" effect="light" type="primary" @click="goToLogin"
+      <el-button size="mini" effect="light" type="primary" @click="pageSwitch('Login')"
         >登录</el-button
       >
-      <el-button size="mini" effect="light" type="warning" @click="goToLogin"
+      <el-button size="mini" effect="light" type="warning" @click="pageSwitch('Login')"
         >注册</el-button
       >
     </div>
@@ -19,7 +19,7 @@
       <el-avatar :src="userInfo.avatar"></el-avatar>
       <div class="user-option">
         <h3 class="web-font nickname">{{ userInfo.nickname }}</h3>
-        <p v-if="administrator" class="logout">管理博客</p>
+        <p v-if="administrator" class="logout" @click="pageSwitch('Admin')">控制台</p>
         <p class="logout">退出登录</p>
       </div>
     </div>
@@ -41,12 +41,12 @@ export default {
     };
   },
   methods: {
-    goToLogin() {
+    pageSwitch(target) {
       this.$router.push({
-        name: "Login",
+        name: target,
         query: {},
       });
-    },
+    }
   },
 };
 </script>

@@ -2,16 +2,11 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:41:37
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-18 21:00:47
+ * @LastEditTime: 2021-11-19 20:07:24
  * @Description: file content
 -->
 <template>
-  <div>
-    <!-- <el-container> -->
-      <!-- <h1>这是HomePage组件</h1> -->
-      <!-- <el-aside width="200px" class="marrgin"><Aside /></el-aside> -->
-      <!-- <el-main class="marrgin"><HomeMain/><HomeMain/></el-main> -->
-    <!-- </el-container> -->
+  <div class="out">
     <IndexMain/>
   </div>
 </template>
@@ -27,8 +22,11 @@ export default {
 };
 </script>
 
-<style>
-.marrgin{
-  margin: 10px;
-}
+<style scoped>
+/* .out{
+  width: 1000px;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 </style>

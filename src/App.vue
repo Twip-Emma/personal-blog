@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 10:27:10
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-17 21:17:26
+ * @LastEditTime: 2021-11-19 20:09:30
  * @Description: file content
 -->
 <template>
@@ -11,7 +11,7 @@
       <el-header><NavBar /></el-header>
       <!-- 这里应该动态展示 -->
       <!-- <HomePage/> -->
-      <router-view></router-view>
+      <router-view class="app2"></router-view>
       <el-footer class="el-footer"><Footer /></el-footer>
     </el-container>
   </div>
@@ -32,10 +32,15 @@ export default {
 
 <style>
 .app {
-  width: 80%;
+  width: 100%;
   left: 0;
   right: 0;
   position: absolute;
+  margin: auto;
+}
+
+.app2{
+  width: 80%;
   margin: auto;
 }
 

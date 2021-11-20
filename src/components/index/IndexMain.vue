@@ -2,10 +2,11 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 20:59:53
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 09:34:51
+ * @LastEditTime: 2021-11-19 20:04:59
  * @Description: file content
 -->
 <template>
+<div>
   <el-container>
     <el-row :gutter="12">
       <!-- 博客列表容器 -->
@@ -83,6 +84,7 @@
       </el-col>
     </el-row>
   </el-container>
+</div>
 </template>
 
 <script>
@@ -209,6 +211,13 @@ export default {
 </script>
 
 <style scoped>
+/* .out{
+  width: 1000px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 body {
   width: 100%;
 }

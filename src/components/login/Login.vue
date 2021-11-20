@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 17:53:11
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 19:20:20
+ * @LastEditTime: 2021-11-19 20:00:12
  * @Description: file content
 -->
 <template>
@@ -16,7 +16,8 @@
           <input type="text" class="e" placeholder="user_id" />
           <input type="password" class="e" placeholder="user_password" />
           <a href="#" class="f">忘记密码？</a>
-          <a href="#" class="g">Login</a>
+          <!-- <el-button type="primary" icon="el-icon-search">搜索</el-button> -->
+          <el-button class="login"  type="primary">登录</el-button>
         </div>
       </div>
     </div>
@@ -28,14 +29,21 @@ export default {};
 </script>
 
 <style scoped>
+.out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+}
 
 .a {
-  position: relative;
+  /* position: relative; */
   /* top: 50px; */
   /* margin-trim: 60px; */
-  width: 100%;
-  height: 80%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  /* left: 20%; */
+  /* width: 100%; */
+  /* height: 80%; */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   display: flex;
 }
 
@@ -93,5 +101,9 @@ export default {};
   border-radius: 30px;
   background-image: linear-gradient(to left, #9c88ff, #3cadeb);
   text-align: center;
+}
+
+.login{
+    width: 100%;
 }
 </style>

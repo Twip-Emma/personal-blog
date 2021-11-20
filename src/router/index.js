@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:42:56
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 19:04:41
+ * @LastEditTime: 2021-11-20 17:28:41
  * @Description: file content
  */
 import Vue from 'vue'
@@ -10,15 +10,18 @@ import VueRouter from 'vue-router'
 
 // 路由懒加载
 // const Welcome = () => import(/* webpackChunkName: "Welcome" */ '@/views/Welcome')
+// 普通用户相关组件
 import HomePage from '@/views/HomePage'
 import Essay from '@/views/Essay'
 import Message from '@/views/Message'
 import Project from '@/views/Project'
 import About from '@/views/About'
 import BlogInfo from '@/components/index/BlogInfo'
-
 import Login from '@/components/login/Login'
 
+// 管理员相关组件
+import Admin from '@/views/Admin'
+import UserFrom from '@/components/admin/UserFrom'
 
 const routes = [
     // {
@@ -63,6 +66,20 @@ const routes = [
         name:"Login",
         path:"/login",
         component:Login
+    },
+    //以下是管理员面板
+    {
+        name:"Admin",
+        path:"/admin",
+        component:Admin,
+        children:[
+            {
+                name:'AdminUserFrom',
+                path:"userForm",
+                component:UserFrom
+
+            }
+        ]
     }
 ]
 

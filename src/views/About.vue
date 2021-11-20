@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 17:10:48
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 14:07:50
+ * @LastEditTime: 2021-11-20 22:33:31
  * @Description: file content
 -->
 <template>
@@ -88,20 +88,11 @@
                     <hr>
 					<h2>个人简介</h2>
                     <Info/>
-                    <!-- <div class="tool">
-                        <a href="https://leetcode-cn.com/problemset/all/" target="_blank">Leetcode</a><br>
-						<a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank">剑指 Offer</a>				
-                    </div> -->
 					
 					<hr>
                     <h2>我的收藏</h2>
                     <Tool/>
-                    <!-- <div class="tool">
-                        <a href="https://mdnice.com/" target="_blank">Markdown Nice</a><br>
-						<a href="http://lowcode.magicalcoder.com/" target="_blank">magicalcoder</a><br>
-						<a href="https://www.ssyer.com/" target="_blank">沙沙野</a><br>						
-						<a href="http://www.network-science.de/ascii/" target="_blank">ASCII Generator</a>						
-                    </div> -->
+                    
                 </div>
             </article>
          </div>
@@ -150,10 +141,6 @@ hr:before {
     left: 5%;
     z-index: 1;
     color: #49b1f5;
-    /* content: '\f0c4'; */
-    /* font: normal normal normal 14px/1 FontAwesome;
-    font-size: 20px;
-    transition: all 1s ease-in-out; */
 }
 hr {
     position: relative;
@@ -183,33 +170,7 @@ strong{
     flex-direction: column;
     transition: all .5s;
 }
-#nav.not_index_bg {
-    height: 20rem;
-}
-#nav {
-    position: relative;
-    margin-bottom: 1rem;
-    margin-top: -2rem;
-    width: 100%;
-    background-color: #49b1f5;
-    background-attachment: local;
-    background-position: center;
-    background-size: cover;
-}
-#page_site-info {
-    position: absolute;
-    top: 10rem;
-    width: 100%;
-}
-#site-title {
-    color: #eee;
-    text-align: center;
-    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, .15);
-    line-height: 1.5;
-    font-weight: 700;
-    font-size: 1.3rem;
-    animation: titlescale 1s;
-}
+
 main {
     display: block;
 }
@@ -268,62 +229,6 @@ h1 {
     padding: 1rem 1.2rem;
 }
 
-.skillbar {
-    position: relative;
-    display: block;
-    max-width: 360px;
-    margin: 15px 10px;
-    background: #eee;
-    height: 30px;
-    border-radius: 35px;
-    -moz-border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -webkit-transition: 0.4s linear;
-    -moz-transition: 0.4s linear;
-    -o-transition: 0.4s linear;
-    transition: 0.4s linear;
-    -webkit-transition-property: width, background-color;
-    -moz-transition-property: width, background-color;
-    -o-transition-property: width, background-color;
-    transition-property: width, background-color;
-}
-
-.skillbar .skillbar-title {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 110px;
-    font-size: 0.9rem;
-    color: #ffffff;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-}
-.skillbar .skillbar-title span {
-    display: block;
-    background: rgba(0, 0, 0, 0.15);
-    padding: 0 20px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-}
-.skillbar .skill-bar-percent {
-    position: absolute;
-    right: 10px;
-    top: 0;
-    font-size: 12px;
-    height: 30px;
-    line-height: 30px;
-    color: #ffffff;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.tool a {
-    color: #FF0066;
-}
-
 .is-center {
     text-align: center;
 }
@@ -380,34 +285,6 @@ aside_content .card-info .author-info__description {
 #aside_content .card-webinfo .webinfo .webinfo-item div:last-child {
     display: block;
     float: right;
-}
-#footer {
-    position: relative;
-    margin-top: 1rem;
-    background-attachment: local;
-    background-position: bottom;
-    background-size: cover;
-}
-#footer-wrap {
-    position: relative;
-    padding: 2rem 1rem;
-    text-align: center;
-}
-
-
-#footer, .layout_page, .layout_post {
-    -webkit-animation: main 1s;
-    -moz-animation: main 1s;
-    -o-animation: main 1s;
-    -ms-animation: main 1s;
-    animation: main 1s;
-}
-
-@media screen and (min-width: 768px){
-    #site-title {
-        font-size: 2rem;
-    }
-
 }
 
 @media screen and (max-width: 768px){

@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 09:40:09
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 12:26:42
+ * @LastEditTime: 2021-11-20 22:26:04
  * @Description: file content
 -->
 <template>
@@ -152,60 +152,9 @@ export default {
           updateTime: "2021-10-13T13:55:12.179+00:00",
           lastLoginTime: "2021-10-13T13:55:12.000+00:00",
         },
-        comments: [
-          {
-            id: 471,
-            userId: 470,
-            nickname: "132131",
-            email: "12312@qq,cin",
-            content: "21312",
-            avatar:
-              "http://hikari.top/images/d5026d40-d68e-4e0d-a0b9-37cd58e3ff35.png",
-            createTime: "2021-08-30T02:25:55.101+00:00",
-            parentComment: null,
-            adminComment: false,
-            children: [],
-          },
-          {
-            id: 589,
-            userId: 585,
-            nickname: "blue",
-            email: "blue@qq.com",
-            content: "大佬，6666，佩服",
-            avatar:
-              "http://hikari.top/images/d5026d40-d68e-4e0d-a0b9-37cd58e3ff35.png",
-            createTime: "2021-09-17T10:45:57.767+00:00",
-            parentComment: null,
-            adminComment: false,
-            children: [],
-          },
-          {
-            id: 808,
-            userId: 807,
-            nickname: "yang",
-            email: "fgbb@qq.com",
-            content: "666",
-            avatar:
-              "http://hikari.top/images/a625f8a4-d7a9-4f88-8e08-3c16c5d1c583.jpg",
-            createTime: "2021-11-17T12:43:43.169+00:00",
-            parentComment: null,
-            adminComment: false,
-            children: [],
-          },
-        ],
+
         tagIds: null,
       },
-      replyForm: {
-        content: "",
-      },
-      replyFormRules: {
-        content: [
-          { required: true, message: "评论内容不能为空！" },
-          { min: 0, max: 100, message: "评论内容不超过100字！" },
-        ],
-      },
-      rpActiveId: -1,
-      blogId: 0,
       wechart:
         "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
       alipay:
@@ -213,54 +162,6 @@ export default {
       commentForm: {
         content: "",
       },
-      loginDialogFormVisible: false,
-      commentFormRules: {
-        content: [
-          { required: true, message: "评论内容不能为空！" },
-          { min: 0, max: 100, message: "评论内容不超过100字！" },
-        ],
-      },
-      rootCmtTree: [
-        {
-          id: 471,
-          userId: 470,
-          nickname: "132131",
-          email: "12312@qq,cin",
-          content: "21312",
-          avatar:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/cdn/yuewuzhijian/yuewuzhijian.png",
-          createTime: "2021-08-30T02:25:55.101+00:00",
-          parentComment: null,
-          adminComment: false,
-          children: [],
-        },
-        {
-          id: 589,
-          userId: 585,
-          nickname: "blue",
-          email: "blue@qq.com",
-          content: "大佬，6666，佩服",
-          avatar:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/cdn/yuewuzhijian/yuewuzhijian.png",
-          createTime: "2021-09-17T10:45:57.767+00:00",
-          parentComment: null,
-          adminComment: false,
-          children: [],
-        },
-        {
-          id: 808,
-          userId: 807,
-          nickname: "yang",
-          email: "fgbb@qq.com",
-          content: "666",
-          avatar:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/cdn/yuewuzhijian/yuewuzhijian.png",
-          createTime: "2021-11-17T12:43:43.169+00:00",
-          parentComment: null,
-          adminComment: false,
-          children: [],
-        },
-      ],
     };
   },
 };
@@ -287,16 +188,6 @@ hr.style-one {
     rgba(64, 158, 255, 0.75),
     rgba(64, 158, 255, 0)
   );
-}
-.commmet-reply {
-  position: relative;
-}
-.commmet-reply .auth-info {
-  position: absolute;
-  left: 0;
-}
-.commmet-reply .submit {
-  text-align: center;
 }
 .appreciate {
   text-align: center;
@@ -381,8 +272,6 @@ hr.style-one {
 }
 .comments {
   margin-top: 150px;
-  /* border: 1px solid rgba(34, 36, 38, 0.15); */
-  /* border-top: 2px solid #409eff; */
   text-align: left;
 }
 .comments .reply {
@@ -408,9 +297,6 @@ hr.style-one {
   font-weight: 700;
   font-size: 1.28571429rem;
   color: rgba(0, 0, 0, 0.87);
-}
-.write-commmet {
-  margin-top: 20px;
 }
 .blog-pic {
   width: 100%;

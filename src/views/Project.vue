@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 08:04:12
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-18 17:10:27
+ * @LastEditTime: 2021-11-20 22:11:38
  * @Description: file content
 -->
 <template>
@@ -196,7 +196,7 @@ export default {
   clip-path: polygon(0 0, 92% 0%, 100% 100%, 0% 100%);
 }
 .el-card:hover .el-image {
-  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   transition: all 0.6s;
 }
 .project .pro-info {

@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 20:59:53
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 20:04:59
+ * @LastEditTime: 2021-11-20 22:20:30
  * @Description: file content
 -->
 <template>
@@ -13,7 +13,6 @@
       <el-col :xs="24" :sm="17">
         <el-card
           style="background-color: rgba(255, 255, 255, 0.9)"
-          class="left-item"
         >
           <!-- 顶栏：显示博客总篇数 -->
           <div slot="header" class="total">
@@ -98,7 +97,6 @@ export default {
         pagenum: 1,
         pagesize: 8,
       },
-      intro: "",
       blogList: [
         {
           id: 449,
@@ -211,229 +209,18 @@ export default {
 </script>
 
 <style scoped>
-/* .out{
-  width: 1000px;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-body {
-  width: 100%;
-}
-.welcome {
-  background-color: rgba(0, 0, 0, 0.1);
-  border: none;
-  height: 90%;
-  position: relative;
-}
-.welcome .border {
-  width: 812px;
-  height: 112px;
-  position: absolute;
-  top: -6px;
-  left: -6px;
-  border: 3px solid white;
-  box-sizing: border-box;
-  animation: clipMe 5s linear infinite;
-}
-.welcome .tit {
-  box-sizing: border-box;
-  position: relative;
-  width: 800px;
-  height: 100px;
-  line-height: 100px;
-  box-shadow: inset 0 0 0 1px white;
-  margin: 40px auto;
-  margin-top: 80px;
-  color: white;
-  text-align: center;
-  font-size: 50px;
-  font-weight: normal;
-  letter-spacing: 10px;
-}
-.welcome .intro {
-  letter-spacing: 5px;
-  line-height: 50px;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  font-weight: normal;
-  color: white;
-}
-.welcome .down {
-  animation: bounce 2s infinite;
-  animation-duration: 3s;
-  font-size: 25px;
-  position: absolute;
-  bottom: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-.welcome .down:hover {
-  animation: none;
-  cursor: pointer;
-  box-shadow: 0 0 20px 0 white;
-  transition: all 0.2s;
-}
-@keyframes clipMe {
-  0%,
-  100% {
-    clip: rect(0px, 806px, 6px, 0px);
-  }
-  25% {
-    clip: rect(0px, 6px, 112px, 0px);
-  }
-  50% {
-    clip: rect(112px, 812px, 112px, 0px);
-  }
-  75% {
-    clip: rect(0px, 812px, 112px, 806px);
-  }
-}
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translate(-50%, 0);
-  }
-  40% {
-    transform: translate(-50%, -30px);
-  }
-  60% {
-    transform: translate(-50%, -15px);
-  }
-}
-ul {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 0;
-  border-radius: 5px;
-}
 .el-pagination {
   padding-bottom: 20px;
 }
 .el-card /deep/ .el-card__body {
   padding: 0;
 }
-.right-item {
-  margin-bottom: 20px;
-}
-.right-item li:first-child {
-  border-top: 1px solid rgba(179, 216, 255, 0.5);
-}
-.right-item li {
-  border-bottom: 1px solid rgba(179, 216, 255, 0.5);
-}
-.right-item .more {
-  text-align: center;
-  color: #3a8ee6;
-  padding: 8px;
-}
-.right-item .more:hover {
-  cursor: pointer;
-  color: #3a8ee6;
-}
-.right-item .blog-type:hover,
-.right-item .activeType {
-  background-color: rgba(58, 142, 230, 0.3);
-  cursor: pointer;
-}
-.right-item .tags {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 15px 13px 0;
-  border-bottom: 1px solid rgba(179, 216, 255, 0.5);
-}
-.right-item .tag-item {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-.right-item .tag-item .tag {
-  background-color: #ecf5ff;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 22px;
-  padding: 0 10px;
-  line-height: 22px;
-  font-size: 10px;
-  color: #409eff;
-  border-radius: 4px;
-  white-space: nowrap;
-  border: 1px solid #409eff;
-  transition: 0.2s;
-}
-.right-item .tag-item .sjx-outer {
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-right: 6px solid #409eff;
-  position: relative;
-  transition: 0.2s;
-}
-.right-item .tag-item .sjx-inner {
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-right: 6px solid #ecf5ff;
-  top: -6px;
-  left: 1px;
-  position: absolute;
-  transition: 0.2s;
-}
-.right-item .tag-item:hover,
-.right-item .activeTag {
-  box-sizing: border-box;
-}
-.right-item .tag-item:hover .tag,
-.right-item .activeTag .tag {
-  color: white;
-  background-color: #409eff;
-  cursor: pointer;
-}
-.right-item .tag-item:hover .sjx-inner,
-.right-item .activeTag .sjx-inner {
-  border-right: 6px solid #409eff;
-}
+
 .blog-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
   line-height: 40px;
-}
-.recommend-blog {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.recommend-blog a {
-  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-  line-height: 40px;
-  display: block;
-  text-decoration: none;
-  color: black;
-}
-.recommend-blog a:hover {
-  color: #3a8ee6;
 }
 .total {
   display: flex;
@@ -516,23 +303,6 @@ ul {
 @media screen and (max-width: 768px) {
   .blog-date {
     display: none;
-  }
-  .welcome {
-    width: 100%;
-  }
-  .welcome .border {
-    display: none;
-  }
-  .welcome .tit {
-    font-size: 2rem;
-    width: 100%;
-    line-height: 50px;
-    letter-spacing: 2px;
-    height: auto;
-  }
-  .welcome .intro {
-    font-size: 1rem;
-    line-height: 30px;
   }
   .el-pagination {
     width: 100%;

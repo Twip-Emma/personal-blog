@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 12:14:06
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 12:24:22
+ * @LastEditTime: 2021-11-20 22:27:06
  * @Description: file content
 -->
 <template>
@@ -82,6 +82,20 @@ export default {
           nickname: "昵称",
           createTime: "2021-11-17",
           content: "这是评论1",
+        },
+        {
+          id: "xxxx2",
+          avatar: "???",
+          nickname: "昵称",
+          createTime: "2021-11-17",
+          content: "芜湖起飞",
+        },
+        {
+          id: "xxxx3",
+          avatar: "???",
+          nickname: "昵称",
+          createTime: "2021-11-17",
+          content: "博主快爬",
         },
       ],
       userInfo: {

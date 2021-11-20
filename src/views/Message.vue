@@ -76,6 +76,13 @@ export default {
           createTime: "2021-11-17",
           content: "这是评论1",
         },
+        {
+          id: "xxxx2",
+          avatar: "???",
+          nickname: "昵称2",
+          createTime: "2021-11-19",
+          content: "这是评论2",
+        }
       ],
       userInfo: {
           nickname:"七画一只妖",

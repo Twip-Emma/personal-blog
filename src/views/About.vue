@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 17:10:48
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-18 21:15:41
+ * @LastEditTime: 2021-11-20 14:07:50
  * @Description: file content
 -->
 <template>
@@ -78,66 +78,30 @@
             <!-- 右侧大容器 -->
             <article id="page">
                 <div class="article-container">
-                    <h2>听听音乐</h2>
-
+                    <h2>学习轨迹</h2>
+                    <Study/>
                     <hr>
                     
 					<h2>技能属性</h2>
-					<div class="skillbox">
-						<div class="skillbar">
-							<div class="skillbar-title" style="background: linear-gradient(to right, #FF0066 0%, #FF00CC 100%); width: 75%">
-								<span>Java</span>
-							</div>
-							<div class="skill-bar-percent">75%</div>
-						</div>
-						<div class="skillbar">
-							<div class="skillbar-title" style="background: linear-gradient(to right, #9900FF 0%, #CC66FF 100%); width: 40%">
-								<span>前端</span>
-							</div>
-							<div class="skill-bar-percent">40%</div>
-						</div>
-						<div class="skillbar">
-							<div class="skillbar-title" style="background: linear-gradient(to right, #2196F3 0%, #42A5F5 100%); width: 60%">
-								<span>Spring</span>
-							</div>
-							<div class="skill-bar-percent">60%</div>
-						</div>
-						<div class="skillbar">
-							<div class="skillbar-title" style="background: linear-gradient(to right, #00BCD4 0%, #80DEEA 100%); width: 70%">
-								<span>SpringMVC</span>
-							</div>
-							<div class="skill-bar-percent">70%</div>
-						</div>
-						<div class="skillbar">
-							<div class="skillbar-title" style="background: linear-gradient(to right, #4CAF50 0%, #81C784 100%); width: 60%">
-								<span>Mybatis</span>
-							</div>
-							<div class="skill-bar-percent">60%</div>
-						</div>
-						<div class="skillbar">
-							<div class="skillbar-title" style="background: linear-gradient(to right, #FFEB3B 0%, #FFF176 100%); width: 75%">
-								<span>数据结构与算法</span>
-							</div>
-							<div class="skill-bar-percent">75%</div>
-						</div>
-					</div>
-
+                    <Skill/>
 
                     <hr>
-					<h2>刷题</h2>
-                    <div class="tool">
+					<h2>个人简介</h2>
+                    <Info/>
+                    <!-- <div class="tool">
                         <a href="https://leetcode-cn.com/problemset/all/" target="_blank">Leetcode</a><br>
 						<a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank">剑指 Offer</a>				
-                    </div>
+                    </div> -->
 					
 					<hr>
-                    <h2>工具</h2>
-                    <div class="tool">
+                    <h2>我的收藏</h2>
+                    <Tool/>
+                    <!-- <div class="tool">
                         <a href="https://mdnice.com/" target="_blank">Markdown Nice</a><br>
 						<a href="http://lowcode.magicalcoder.com/" target="_blank">magicalcoder</a><br>
 						<a href="https://www.ssyer.com/" target="_blank">沙沙野</a><br>						
 						<a href="http://www.network-science.de/ascii/" target="_blank">ASCII Generator</a>						
-                    </div>
+                    </div> -->
                 </div>
             </article>
          </div>
@@ -146,8 +110,12 @@
 </template>
 
 <script>
+import Skill from '@/components/about/Skill'
+import Info from '@/components/about/Info'
+import Tool from '@/components/about/Tool'
+import Study from '@/components/about/Study'
 export default {
-
+    components:{Skill,Info,Tool,Study}
 }
 </script>
 
@@ -182,10 +150,10 @@ hr:before {
     left: 5%;
     z-index: 1;
     color: #49b1f5;
-    content: '\f0c4';
-    font: normal normal normal 14px/1 FontAwesome;
+    /* content: '\f0c4'; */
+    /* font: normal normal normal 14px/1 FontAwesome;
     font-size: 20px;
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; */
 }
 hr {
     position: relative;

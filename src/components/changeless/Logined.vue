@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 18:05:54
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-19 19:08:18
+ * @LastEditTime: 2021-11-20 12:41:58
  * @Description: file content
 -->
 <template>
@@ -11,7 +11,9 @@
       <el-button size="mini" effect="light" type="primary" @click="goToLogin"
         >登录</el-button
       >
-      <el-button size="mini" effect="light" type="warning">注册</el-button>
+      <el-button size="mini" effect="light" type="warning" @click="goToLogin"
+        >注册</el-button
+      >
     </div>
     <div v-else class="loginInfo">
       <el-avatar :src="userInfo.avatar"></el-avatar>

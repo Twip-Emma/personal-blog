@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 20:59:53
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 22:20:30
+ * @LastEditTime: 2021-11-21 10:17:25
  * @Description: file content
 -->
 <template>
@@ -97,114 +97,20 @@ export default {
         pagenum: 1,
         pagesize: 8,
       },
-      blogList: [
-        {
-          id: 449,
-          title: "博客名称1",
-          content: "测试测试测试测试测试测试测试测试测试测试测试测试测试v",
-          firstPicture:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          flag: "原创",
-          views: 99999,
-          appreciation: 0,
-          createTime: "这里写创建时间",
-          updateTime: "这里是更新时间",
-          description: "这是简介",
-          type: {
-            id: 1,
-            name: "主要技术栈",
-            pic_url:
-              "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-            color: "#59c9fb",
-          },
-          tags: [
-            { id: 1, name: "JavaScript" },
-            { id: 2, name: "css" },
-            { id: 3, name: "html" },
-          ],
-          user: {
-            id: 1,
-            nickname: "七画一只妖",
-            avatar:
-              "https://cdn.jsdelivr.net/gh/yuewuzhijian/cdn/yuewuzhijian/yuewuzhijian.png",
-            type: "1",
-          },
-          comments: null,
-          tagIds: null,
-        },
-        {
-          id: 450,
-          title: "博客名称1",
-          content: "测试测试测试测试测试测试测试测试测试测试测试测试测试v",
-          firstPicture:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          flag: "原创",
-          views: 99999,
-          appreciation: 0,
-          createTime: "这里写创建时间",
-          updateTime: "这里是更新时间",
-          description: "这是简介",
-          type: {
-            id: 1,
-            name: "主要技术栈",
-            pic_url:
-              "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-            color: "#59c9fb",
-          },
-          tags: [
-            { id: 1, name: "JavaScript" },
-            { id: 2, name: "css" },
-            { id: 3, name: "html" },
-          ],
-          user: {
-            id: 1,
-            nickname: "七画一只妖",
-            avatar:
-              "https://cdn.jsdelivr.net/gh/yuewuzhijian/cdn/yuewuzhijian/yuewuzhijian.png",
-            type: "1",
-          },
-          comments: null,
-          tagIds: null,
-        },
-        {
-          id: 451,
-          title: "博客名称1",
-          content: "测试测试测试测试测试测试测试测试测试测试测试测试测试v",
-          firstPicture:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          flag: "原创",
-          views: 99999,
-          appreciation: 0,
-          createTime: "这里写创建时间",
-          updateTime: "这里是更新时间",
-          description: "这是简介",
-          type: {
-            id: 1,
-            name: "主要技术栈",
-            pic_url:
-              "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-            color: "#59c9fb",
-          },
-          tags: [
-            { id: 1, name: "JavaScript" },
-            { id: 2, name: "css" },
-            { id: 3, name: "html" },
-          ],
-          user: {
-            id: 1,
-            nickname: "七画一只妖",
-            avatar:
-              "https://cdn.jsdelivr.net/gh/yuewuzhijian/cdn/yuewuzhijian/yuewuzhijian.png",
-            type: "1",
-          },
-          comments: null,
-          tagIds: null,
-        },
-      ],
       //   判断用户是否进入某一个博客内
       selected: false,
     };
   },
+  computed:{
+    blogList(){
+      return this.$store.state.globalData.blogList
+    }
+  },
+  methods:{
+    getBlogInfo(id){
+      this.sotre
+    }
+  }
 };
 </script>
 

@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 20:59:53
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-21 10:17:25
+ * @LastEditTime: 2021-11-29 11:42:04
  * @Description: file content
 -->
 <template>
@@ -109,6 +109,12 @@ export default {
   methods:{
     getBlogInfo(id){
       // this.sotre
+      this.$router.push({
+        name:"BlogInfo",
+        query:{
+          id:id
+        }
+      })
       console.log(id)
     }
   }

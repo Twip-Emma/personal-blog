@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 11:42:56
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 17:28:41
+ * @LastEditTime: 2021-11-29 11:22:31
  * @Description: file content
  */
 import Vue from 'vue'
@@ -60,7 +60,12 @@ const routes = [
     {
         name:"BlogInfo",
         path:"/bloginfo",
-        component:BlogInfo
+        component:BlogInfo,
+        props(route){
+            return {
+                id: route.query.id
+            }
+        }
     },
     {
         name:"Login",

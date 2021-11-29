@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-17 16:50:58
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 22:11:21
+ * @LastEditTime: 2021-11-29 10:14:26
  * @Description: file content
 -->
 <template>
@@ -30,30 +30,12 @@ export default {
   name: "Essay",
   data() {
     return {
-      essayList: [
-        {
-          id: "xxxxxx1",
-          createTime: "2021-11-17",
-          title: "这是标题1",
-          content: "文章正文1",
-          image: "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-        },
-        {
-          id: "xxxxxx2",
-          createTime: "2021-11-06",
-          title: "这是标题2",
-          content: "文章正文2",
-          image: "",
-        },
-        {
-          id: "xxxxxx3",
-          createTime: "2021-11-01",
-          title: "标题3",
-          content: "oh,boy next door",
-          image: "",
-        }
-      ],
     };
+  },
+  computed:{
+    essayList(){
+      return this.$store.state.globalData.essayList
+    }
   },
   created() {
     // this.getEssayList();

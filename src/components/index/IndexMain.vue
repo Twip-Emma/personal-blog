@@ -108,7 +108,8 @@ export default {
   },
   methods:{
     getBlogInfo(id){
-      this.sotre
+      // this.sotre
+      console.log(id)
     }
   }
 };

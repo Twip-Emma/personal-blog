@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-18 08:04:12
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 22:11:38
+ * @LastEditTime: 2021-11-29 10:18:59
  * @Description: file content
 -->
 <template>
@@ -72,85 +72,16 @@ export default {
   name: "project",
   data() {
     return {
-      projectList: [
-        {
-          id: "1",
-          title: "项目名称",
-          content:
-            "这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介",
-          pic_url:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          url: "xxx",
-          techs: "技术栈1，技术栈2，技术栈3，技术栈4",
-          type: 0,
-        },
-        {
-          id: "2",
-          title: "项目名称",
-          content:
-            "这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介这是简介",
-          pic_url:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          url: "xxx",
-          techs: "技术栈1，技术栈2，技术栈3，技术栈4",
-          type: 0,
-        },
-      ],
-
-      demoList: [
-        {
-          id: "1",
-          title: "其他项目1",
-          content: "另一种排版另一种排版另一种排版另一种排版",
-          pic_url:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          url: "xxx",
-          techs: "技术栈1，技术栈2，技术栈3，技术栈4",
-          type: 1,
-        },
-                {
-          id: "2",
-          title: "其他项目1",
-          content: "另一种排版另一种排版另一种排版另一种排版",
-          pic_url:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          url: "xxx",
-          techs: "技术栈1，技术栈2，技术栈3，技术栈4",
-          type: 1,
-        },
-                {
-          id: "3",
-          title: "其他项目1",
-          content: "另一种排版另一种排版另一种排版另一种排版",
-          pic_url:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          url: "xxx",
-          techs: "技术栈1，技术栈2，技术栈3，技术栈4",
-          type: 1,
-        },
-                {
-          id: "4",
-          title: "其他项目1",
-          content: "另一种排版另一种排版另一种排版另一种排版",
-          pic_url:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          url: "xxx",
-          techs: "技术栈1，技术栈2，技术栈3，技术栈4",
-          type: 1,
-        },
-                {
-          id: "5",
-          title: "其他项目1",
-          content: "另一种排版另一种排版另一种排版另一种排版",
-          pic_url:
-            "https://cdn.jsdelivr.net/gh/yuewuzhijian/sdorica-figure/e0046/e0046s5_figure.png",
-          url: "xxx",
-          techs: "技术栈1，技术栈2，技术栈3，技术栈4",
-          type: 1,
-        },
-      ],
     };
   },
+  computed:{
+    projectList(){
+      return this.$store.state.globalData.projectList
+    },
+    demoList(){
+      return this.$store.state.globalData.demoList
+    }
+  }
 };
 </script>
 

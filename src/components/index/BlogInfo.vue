@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-19 09:40:09
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 22:52:50
+ * @LastEditTime: 2021-11-29 11:38:48
  * @Description: file content
 -->
 <template>
@@ -93,33 +93,11 @@
 import CommentBlog from "@/components/index/CommentBlog";
 export default {
   components: { CommentBlog },
+  props:["id"],
   data() {
     return {
       administrator: false,
       userInfo: [],
-      messageList: [
-        {
-          id: "xxxx1",
-          avatar: "???",
-          nickname: "昵称",
-          createTime: "2021-11-17",
-          content: "这是评论1",
-        },
-        {
-          id: "xxxx1",
-          avatar: "???",
-          nickname: "昵称",
-          createTime: "2021-11-17",
-          content: "这是评论1",
-        },
-        {
-          id: "xxxx1",
-          avatar: "???",
-          nickname: "昵称",
-          createTime: "2021-11-17",
-          content: "这是评论1",
-        },
-      ],
       blog: {
         id: 449,
         title: "原生html配合canvas仿echarts图标组件合集",
@@ -166,6 +144,9 @@ export default {
       },
     };
   },
+  mounted(){
+    console.log(this.id)
+  }
 };
 </script>
 

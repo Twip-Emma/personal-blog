@@ -2,7 +2,7 @@
  * @Author: 七画一只妖
  * @Date: 2021-11-20 16:42:13
  * @LastEditors: 七画一只妖
- * @LastEditTime: 2021-11-20 21:13:42
+ * @LastEditTime: 2022-01-03 14:23:07
  * @Description: file content
 -->
 <template>
@@ -125,11 +125,11 @@ export default {
 
 <style scoped>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 230px;
+  width: 200px;
   min-height: 800px;
 }
 
 .welcome {
-  height: 40px;
+  height: 100px;
 }
 </style>
